@@ -1,0 +1,5 @@
+<launch>
+  <include file="$(find ydlidar_ros)/launch/X4.launch" />
+  <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen" />
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find ydlidar_ros)/launch/lidar.rviz" required="true" />
+</launch>

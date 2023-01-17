@@ -1,0 +1,7 @@
+<launch>
+  <include file="$(find my_robot)/launch/my_robot_navigation.launch">
+    <param name="map_file" value="$HOME/map.yaml"/>
+  </include>
+
+  <node pkg="my_robot" type="my_navi_node" name="my_navi"/>
+</launch>
